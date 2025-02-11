@@ -7,7 +7,7 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
-const PORT = process.env.PORT || 8014;
+const PORT = process.env.PORT || 8022;
 
 export const initServer = ({ bot }: { bot: Whatsapp }) => {
   app.get("/", async (req: Request, res: Response) => {
