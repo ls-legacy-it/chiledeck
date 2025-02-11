@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",  // Changed to ES2020
+    "module": "commonjs",
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "outDir": "./lib",
+  },
+  "include": ["./src/**/*"],
+  "exclude": ["node_modules"] 
+}
+
