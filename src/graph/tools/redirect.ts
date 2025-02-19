@@ -67,11 +67,11 @@ export const redirectTool = async (state: GraphState) => {
     },
     body: JSON.stringify({
       body: notificationTemplate,
-      chatId: state.thread_id, // "56920608325@s.whatsapp.net",
+      chatId: "56932184706@s.whatsapp.net", // ,
     }),
   });
 
-  /*   // if(tool.pause) Pausando el agente
+  // if(tool.pause) Pausando el agente
   await WSSessionModel.findByIdAndUpdate(
     SESSION_ID,
     {
@@ -80,7 +80,7 @@ export const redirectTool = async (state: GraphState) => {
       },
     },
     { new: true } // Optionally, return the updated document
-  ); */
+  );
 
   try {
     await ChatModel.findOneAndUpdate(
