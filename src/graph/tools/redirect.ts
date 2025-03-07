@@ -137,7 +137,7 @@ export const redirectTool = async (state: GraphState) => {
   return [
     {
       role: "tool",
-      content: `¡Gracias por tu interés en *${PUBLIC_NAME}*! 😊 Hemos redirigido tu consulta a nuestro equipo. Si tienes más preguntas en el futuro, no dudes en volver. ¡Que tengas un excelente día! 🌟`,
+      content: `🎉 ¡Gracias por compartir tus datos! 🚀 Nuestro equipo ya está trabajando en tu solicitud y en menos de 24 horas recibirás la respuesta en tu correo. 📩`,
       tool_call_id,
     },
   ];
