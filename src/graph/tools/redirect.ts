@@ -58,18 +58,53 @@ export const redirectTool = async (state: GraphState) => {
   
   🔔 *Equipo,* por favor asignar a alguien para atender esta solicitud lo antes posible. 🚀
   `;
+  try {
+    // if(tool.notify) Notificando por whatsapp
+    await fetch(RedirectConfig.NOTIFICATION_ENDPOINT, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        body: notificationTemplate,
+        chatId: "56932184706@s.whatsapp.net", // ,
+      }),
+    });
+  } catch (err) {
+    console.log(err);
+  }
 
-  // if(tool.notify) Notificando por whatsapp
-  await fetch(RedirectConfig.NOTIFICATION_ENDPOINT, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({
-      body: notificationTemplate,
-      chatId: "56932184706@s.whatsapp.net", // ,
-    }),
-  });
+  try {
+    // if(tool.notify) Notificando por whatsapp
+    await fetch(RedirectConfig.NOTIFICATION_ENDPOINT, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        body: notificationTemplate,
+        chatId: "56932646486@s.whatsapp.net", // ,
+      }),
+    });
+  } catch (err) {
+    console.log(err);
+  }
+
+  try {
+    // if(tool.notify) Notificando por whatsapp
+    await fetch(RedirectConfig.NOTIFICATION_ENDPOINT, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        body: notificationTemplate,
+        chatId: "56982100847@s.whatsapp.net", // ,
+      }),
+    });
+  } catch (err) {
+    console.log(err);
+  }
 
   // if(tool.pause) Pausando el agente
   await WSSessionModel.findByIdAndUpdate(
