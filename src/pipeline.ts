@@ -101,7 +101,6 @@ export async function processPipelines() {
     }
 
     for (const chat of chats_24hr) {
-      console.log("Entering 24hours");
       if (!chat.followUpHistory || chat.followUpHistory.length === 0) {
         continue;
       }
@@ -114,7 +113,6 @@ export async function processPipelines() {
       if (twenty_four && !twenty_four.isSent) {
         const message = pipeline.steps[1].messageTemplate;
 
-        console.log("NOT SENDED 24hours");
         await sleep(2000);
 
         await axios.post(
