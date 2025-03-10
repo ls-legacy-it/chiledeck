@@ -96,8 +96,9 @@ export const callRedirectAgent = async (state: GraphState, node: Node) => {
   const notificationSchema = z.object({
     clientName: z.string().describe("El nombre del cliente es requerido"),
     clientEmail: z.string().describe("El email del cliente es requerido"),
-    clientRut: z.string().describe("El Rut del cliente es requerido"),
-    reason: z.string().describe("El motivo de contacto es requerido"),
+    address: z.string().describe("La Dirección de entrega"),
+    mts: z.string().describe("Los mts2 que requiere el cliente"),
+    reason: z.string().describe("El motivo de contacto es requerido lo mas detallado posible incluyendo los mt2 y la dirección"),
   });
 
   const tools = [

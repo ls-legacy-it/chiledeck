@@ -46,8 +46,9 @@ export const redirectTool = async (state: GraphState) => {
   const notificationTemplate = `
   📢 *Notificación de Atención Requerida*  
   👤 *Cliente:* ${args.clientName}  
-  📧 *Rut del Cliente:* ${args.clientRut}  
+  📧 *Dirección:* ${args.address}  
   📧 *Email del Cliente:* ${args.clientEmail}  
+  📧 *Mts2:* ${args.mts}  
   📝 *Motivo de contacto:* ${args.reason}  
   ⏰ *Fecha y hora de solicitud:* ${new Date().toLocaleTimeString("es-CL", {
     timeZone: "America/Santiago",
